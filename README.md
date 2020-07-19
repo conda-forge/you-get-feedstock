@@ -5,7 +5,7 @@ Home: https://you-get.org/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Dumb downloader that scrapes the web
 
