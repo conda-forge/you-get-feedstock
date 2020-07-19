@@ -1,20 +1,20 @@
 {% set name = "you-get" %}
-{% set version = "0.4.1432" %}
+{% set version = "0.4.1456" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 421b71ee644afc63581c2d57bf6785c0e65c51d9debe74b8449685c90fd56f44
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7b19ac0a459f2e6497ba7c399df50dabb28890ebf2b79a092ae114595fe1b192
 
 build:
   number: 0
   noarch: python
   entry_points:
     - you-get = you_get.__main__:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -38,16 +38,16 @@ test:
     - you-get --help
 
 about:
-  home: "https://you-get.org/"
+  home: https://you-get.org/
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "Dumb downloader that scrapes the web"
+  summary: Dumb downloader that scrapes the web
   description: |
     Command line downloader for YouTube and many other online video/
     audio sources.
-  doc_url: "https://you-get.org/"
-  dev_url: "https://github.com/soimort/you-get"
+  doc_url: https://you-get.org/
+  dev_url: https://github.com/soimort/you-get
 
 extra:
   recipe-maintainers:
