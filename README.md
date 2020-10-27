@@ -5,9 +5,13 @@ Home: https://you-get.org/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/you-get-feedstock/blob/master/LICENSE.txt)
 
 Summary: Dumb downloader that scrapes the web
+
+Development: https://github.com/soimort/you-get
+
+Documentation: https://you-get.org/
 
 Command line downloader for YouTube and many other online video/
 audio sources.
