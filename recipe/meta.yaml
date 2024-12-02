@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 65457b7b8893f08c082532eb34998dc477f533d32568be3bb34e592bdcb44f88
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - you-get = you_get.__main__:main
@@ -19,12 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python >=3.2
+    - python >={{ python_min }}
     - dukpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - you_get
     - you_get.cli_wrapper
